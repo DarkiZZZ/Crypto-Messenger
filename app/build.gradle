@@ -1,18 +1,19 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
 }
 
 android {
-    namespace 'ru.msokolov.cryptomessenger'
-    compileSdk 32
+    namespace = Config.appNameSpace
+    compileSdk = Config.compileSdkVersion
 
     defaultConfig {
-        applicationId "ru.msokolov.cryptomessenger"
-        minSdk 23
-        targetSdk 32
-        versionCode 1
-        versionName "1.0"
+        applicationId = Config.appNameSpace
+        minSdk = Config.minSdkVersion
+        targetSdk = Config.targetSdkVersion
+        versionCode = Config.versionCode
+        versionName = Config.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -33,12 +34,27 @@ android {
 }
 
 dependencies {
+    implementation(project(":core:dagger"))
+    implementation(project(":core:ui"))
 
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.8.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation(AndroidCore.coreKtx)
+    implementation(AndroidUi.appCompat)
+    implementation(AndroidUi.material)
+    implementation(AndroidUi.constraintLayout)
+
+
+    implementation(Navigation.navUi)
+    implementation(Navigation.navFragmentKtx)
+
+    implementation(Room.roomRuntime)
+    implementation(Room.roomKtx)
+    kapt(Room.roomCompiler)
+
+    implementation(Dagger.daggerCore)
+    kapt(Dagger.daggerCompiler)
+    kapt(Dagger.daggerProcessor)
+
+    testImplementation(TestLibs.jUnit)
+    androidTestImplementation(TestLibs.androidJUnit)
+    androidTestImplementation(TestLibs.espresso)
 }
