@@ -31,11 +31,18 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures{
+        viewBinding = true
+    }
 }
 
 dependencies {
     implementation(project(":core:dagger"))
     implementation(project(":core:ui"))
+    implementation(project(":core:navigation"))
+
+    implementation(project(":feature:crypto-list"))
+    implementation(project(":feature:details"))
 
     implementation(AndroidCore.coreKtx)
     implementation(AndroidUi.appCompat)

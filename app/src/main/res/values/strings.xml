@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Crypto Messenger</string>
+    <string name="bottom_nav_icon_desc">icon of bottom navigation button</string>
 </resources>
