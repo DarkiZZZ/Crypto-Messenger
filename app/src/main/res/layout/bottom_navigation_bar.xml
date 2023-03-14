@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="65dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bottom_nav_layout">
+
+    <LinearLayout
+        android:id="@+id/pageOneButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/favouritesButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@drawable/bottom_item_background_unclicked">
+
+        <ImageView
+            android:layout_width="@dimen/bottom_nav_layout_size_icon"
+            android:layout_height="@dimen/bottom_nav_layout_size_icon"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_home"
+            android:contentDescription="@string/bottom_nav_icon_desc" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/favouritesButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/chatButton"
+        app:layout_constraintStart_toEndOf="@id/pageOneButton"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@drawable/bottom_item_background_unclicked">
+
+        <ImageView
+            android:layout_width="@dimen/bottom_nav_layout_size_icon"
+            android:layout_height="@dimen/bottom_nav_layout_size_icon"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_favourites"
+            android:contentDescription="@string/bottom_nav_icon_desc"  />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/chatButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/profileButton"
+        app:layout_constraintStart_toEndOf="@id/favouritesButton"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@drawable/bottom_item_background_unclicked">
+
+        <ImageView
+            android:layout_width="@dimen/bottom_nav_layout_size_icon"
+            android:layout_height="@dimen/bottom_nav_layout_size_icon"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_chat"
+            android:contentDescription="@string/bottom_nav_icon_desc"  />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/profileButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/chatButton"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@drawable/bottom_item_background_unclicked">
+
+        <ImageView
+            android:layout_width="@dimen/bottom_nav_layout_size_icon"
+            android:layout_height="@dimen/bottom_nav_layout_size_icon"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_profile"
+            android:contentDescription="@string/bottom_nav_icon_desc"  />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
