@@ -5,8 +5,8 @@ import ru.msokolov.cryptomessenger.navigation.NavCommand
 
 interface BottomNavigation {
     val toHome : NavCommand
-    val toFavourites : NavCommand
+    /*val toFavourites : NavCommand
     val toChat : NavCommand
-    val toProfile : NavCommand
+    val toProfile : NavCommand*/
 
 }
