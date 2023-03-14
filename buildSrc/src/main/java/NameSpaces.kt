@@ -4,17 +4,17 @@ object NameSpaces {
 
     //core
     private const val coreNameSpace = "$appNameSpace.core"
-   /* const val coreDetailedInfoApiNameSpace = "$coreNameSpace.page_two_api"
+    /*const val coreDetailedInfoApiNameSpace = "$coreNameSpace.page_two_api"
     const val coreDetailedInfoApiInternalNameSpace = "$coreNameSpace.page_two_api_internal"
     const val coreLatestApiNameSpace = "$coreNameSpace.latest_api"
     const val coreLatestApiInternalNameSpace = "$coreNameSpace.latest_api_internal"
     const val coreSaleApiNameSpace = "$coreNameSpace.sale_api"
     const val coreSaleApiInternalNameSpace = "$coreNameSpace.sale_api_internal"
     const val coreSearchApiNameSpace = "$coreNameSpace.search_api"
-    const val coreSearchApiInternalNameSpace = "$coreNameSpace.search_api_internal"
+    const val coreSearchApiInternalNameSpace = "$coreNameSpace.search_api_internal"*/
     const val coreNavigationNameSpace = "$coreNameSpace.navigation"
 
-    //utils
+    /*//utils
     private const val utilsNameSpace = "$appNameSpace.utils"
     const val utilsNetworkNameSpace = "$utilsNameSpace.network"
     const val utilsLiveDataNameSpace = "$utilsNameSpace.livedata"*/
